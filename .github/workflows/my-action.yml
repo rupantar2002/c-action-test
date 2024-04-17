@@ -11,7 +11,8 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, Github Actions!"
+      - name : Say hello
+          run: echo "Hello, Github Actions!"
 
   # Job to build and test c code
   build-and-test:
