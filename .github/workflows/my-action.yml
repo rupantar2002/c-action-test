@@ -26,7 +26,7 @@ jobs:
         
         # Install necessary packages
         - name: Install dependencies
-          run: sudo apt-install -y build-essentials python3
+          run: sudo apt install -y build-essential python3
         
         # See where we are in VM
         - run: pwd
