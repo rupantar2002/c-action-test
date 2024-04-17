@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Say hello
-          run: echo "Hello, Github Actions!"
+        run: echo "Hello, Github Actions!"
 
   # Job to build and test c code
   build-and-test:
@@ -20,20 +20,19 @@ jobs:
     needs: [say-hello]
     runs-on: ubuntu-latest
     steps:
-        
         # Use https://github.com/actions/checkout to checkout this repo
         - name: Check out this repo
-            uses: actions/checkout@v4
+          uses: actions/checkout@v4
         
         # Install necessary packages
         - name: Install dependencies
-            run: sudo apt-install -y build-essentials python3
+          run: sudo apt-install -y build-essentials python3
         
         # See where we are in VM
         - run: pwd
 
         # Run test
         - name: Run test
-            run: python3 test.py
+          run: python3 test.py
 
 
